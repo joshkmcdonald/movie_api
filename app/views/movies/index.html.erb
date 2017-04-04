@@ -1,4 +1,4 @@
-<h1>Movies#index</h1>
+<h1>Search Movies</h1>
 
 <% @movies.each do |movie| %>
   <div>
@@ -6,8 +6,5 @@
     <%= image_tag "http://image.tmdb.org/t/p/w185//#{movie.poster_path}" %>
     <%= movie.overview %>
     <%= movie.release_date %>
-    <!-- <%= image_tag "http://image.tmdb.org/t/p/w185//#{movie.backdrop_path}" %> -->
   </div>
 <% end %>
-
-<!-- http://image.tmdb.org/t/p/w185//5JU9ytZJyR3zmClGmVm9q4Geqbd.jpg -->
