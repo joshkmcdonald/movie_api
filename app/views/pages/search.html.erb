@@ -1,10 +1,19 @@
-<h1>Pages#search</h1>
-<p>Find me in app/views/pages/search.html.erb</p>
+<div class="card">
+  <div class="card-header">
+  </div>
 
-<%= form_tag({controller: "movies", action: "index"}, method: "get") do %>
-  <%= label_tag(:search, "Search for:") %>
-  <%= text_field_tag(:search) %>
-  <%= submit_tag("Search") %>
-<% end %>
+  <div class="card-block">
+    <%= form_tag({controller: "movies", action: "index"}, method: "get") do %>
+      <div class="form-group row">
+        <%= label_tag(:search, "Search:", class: 'col-2 col-form-label') %>
+        <div class="col-10">
+          <%= text_field_tag(:search, "Search for a Movie by Title", class: 'form-control') %>
+        </div>
+      </div>  
+      <%= submit_tag("Search", class: 'btn btn-primary btn-block') %>
+    <% end %>
+  </div>
 
-
+  <div class="card-footer">
+  </div>
+</div>
