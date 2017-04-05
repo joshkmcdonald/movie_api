@@ -1,7 +1,27 @@
 @import "bootstrap";
 
+#background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: #29293d;
+  background-size: cover;
+}
+
 body {
   font-family: 'Cabin Condensed', sans-serif;
+}
+
+.content-wrapper {
+  max-width: 90%;
+  margin: auto;
 }
 
 h1,h2,h3,h4,h5,h6 {
