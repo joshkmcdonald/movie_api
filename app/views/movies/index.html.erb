@@ -1,10 +1,20 @@
-<h1>Search Movies</h1>
+<h1>Your Movie Search</h1>
+<%= link_to "New Search", pages_search_path, class: 'btn btn-secondary' %>
 
-<% @movies.each do |movie| %>
-  <div>
-    <%= movie.title %>
-    <%= image_tag "http://image.tmdb.org/t/p/w185//#{movie.poster_path}" %>
-    <%= movie.overview %>
-    <%= movie.release_date %>
-  </div>
-<% end %>
+<div class="card-columns">
+  <% @movies.each do |movie| %>
+    <div class="movie-card card">
+
+      <div class="card-header">
+        <h5><%= movie.title %></h5>
+      </div>
+      <%= image_tag "http://image.tmdb.org/t/p/w185//#{movie.poster_path}", class: 'card-img card-img-top img-fluid', alt: 'Card image cap' %>
+      <h6 class="small">Overview</h6>
+      <p class="card-text"><%= movie.overview %></p>
+      <h6 class="small">Release Date</h6>
+      <p class="card-text"><%= movie.release_date %></p>
+    </div>
+  <% end %>
+</div>
+
+

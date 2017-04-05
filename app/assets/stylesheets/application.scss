@@ -1,1 +1,44 @@
 @import "bootstrap";
+
+body {
+  font-family: 'Cabin Condensed', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Acme', sans-serif; 
+}
+
+.card-columns {
+  @include media-breakpoint-only(sm) {
+    column-count: 2;
+  }
+  @include media-breakpoint-only(md) {
+    column-count: 3;
+  }
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+}
+
+.card-img {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card-text {
+  max-width: 90%;
+  margin-left: 20px;
+}
+
+.movie-card {
+  margin-bottom: 20px;
+}
+
+.movie-card h6 {
+  margin-left: 20px;
+}
