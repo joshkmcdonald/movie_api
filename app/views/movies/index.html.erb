@@ -1,5 +1,6 @@
-<h1>Your Movie Search</h1>
-<%= link_to "New Search", pages_search_path, class: 'btn btn-secondary' %>
+<h1 class="non-card-text">Your Movie Search</h1>
+<p class="non-card-text">Not the results you were looking for? Try a 
+<%= link_to "new search", pages_search_path %>.</p>
 
 <div class="card-columns">
   <% @movies.each do |movie| %>
