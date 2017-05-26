@@ -1,0 +1,12 @@
+nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
+  button.navbar-toggler.navbar-toggler-right type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+    span.navbar-toggler-icon
+
+  i.fa.fa-film.nav-icon aria-hidden="true"
+  = link_to "Movies Website", root_path, class: 'navbar-brand'
+  .collapse.navbar-collapse#navbarSupportedContent
+    ul.navbar-nav.mr-auto
+      li.nav-item.active
+        = link_to "Home", root_path, class: 'nav-link'
+      li.nav-item
+        = link_to "Search for a Movie", pages_search_path, class: 'nav-link'

@@ -1,0 +1,23 @@
+h1.page-heading.non-card-text
+  | Movies Home
+p.non-card-text
+  | This is a collection of the top rated recent movies that are either currently available or in theaters. This list is updated daily by TheMovieDB.com. You can also search for any movie
+  = link_to "here", pages_search_path 
+  |to get a short overview of the film.
+
+div.card-columns
+  - @movies.each do |movie|
+    .movie-card.card
+
+      .card-header
+        h5
+          = movie.title
+      = image_tag "http://image.tmdb.org/t/p/w185//#{movie.poster_path}", class: 'card-img card-img-top img-fluid', alt: 'Card image cap'
+      h6.small
+        |Overview
+      p.card-text
+        = movie.overview
+      h6.small
+        |Release Date
+      p.card-text
+        = movie.release_date

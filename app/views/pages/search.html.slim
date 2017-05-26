@@ -1,0 +1,16 @@
+h1.page-heading.non-card-text
+  | Search for a Movie
+p.non-card-text
+  |All movies that contain the words of your submitted search will be returned.
+
+.search-card.card
+  .card-header
+
+  .card-block
+    = form_tag({controller: "movies", action: "index"}, method: "get") do
+      .form-group.row
+        = label_tag(:search, "Search:", class: 'col-2 col-form-label')
+        .col-10
+          = text_field_tag(:search, nil, placeholder: "Search for a Movie by Title", class: 'form-control')  
+      = submit_tag("Search", class: 'btn btn-primary btn-block')
+  .card-footer

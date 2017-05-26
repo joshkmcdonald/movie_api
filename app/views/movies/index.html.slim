@@ -1,0 +1,21 @@
+h1.page-heading.non-card-text 
+  | The Results of Your Search for #{@search}
+p.non-card-text 
+  | Not the results you were looking for? Try a 
+  = link_to 'new search', pages_search_path
+
+.card-columns
+  - @movies.each do |movie|
+    .movie-card.card
+      .card-header
+        h5 #{movie.title}
+
+      = image_tag "http://image.tmdb.org/t/p/w185//#{movie.poster_path}", class: 'card-img card-img-top img-fluid', alt: 'Card image cap'
+      h6.small 
+        | Overview
+      p.card-text 
+        | #{movie.overview}
+      h6.small 
+        | Release Date
+      p.card-text 
+        | #{movie.release_date}
