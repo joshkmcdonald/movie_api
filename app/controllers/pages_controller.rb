@@ -6,5 +6,7 @@ class PagesController < ApplicationController
   def search
   end
 
-  
+  def show
+    @movie = Tmdb::Movie.detail(params[:id])
+  end
 end

@@ -1,0 +1,6 @@
+h6.non-card-text
+  = @movie
+  / = image_tag "http://image.tmdb.org/t/p/w185//#{movie.poster_path}", class: 'card-img card-img-top img-fluid', alt: 'Card image cap'
+  = @movie.id
+
+= image_tag "http://image.tmdb.org/t/p/w342//#{@movie.poster_path}", class: 'card-img card-img-top img-fluid', alt: 'Card image cap'

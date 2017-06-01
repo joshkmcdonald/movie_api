@@ -11,7 +11,7 @@ div.card-columns
 
       .card-header
         h5
-          = movie.title
+          = link_to "#{movie.title}", controller: "pages", action: "show", method: "get", :id => movie.id
       = image_tag "http://image.tmdb.org/t/p/w185//#{movie.poster_path}", class: 'card-img card-img-top img-fluid', alt: 'Card image cap'
       h6.small
         |Overview
